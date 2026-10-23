@@ -1,0 +1,442 @@
+benchmark,network,run,epoch,error_percent,magnitude_error_percent,frames
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,0,2666.2001,2555.0264,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,500,206.2386,163.5461,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,1000,245.2019,209.4146,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,1500,101.0458,85.7850,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,2000,32.2190,28.0485,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,2500,20.1175,18.0188,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,3000,13.7330,11.9928,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,3500,9.3620,8.0409,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,4000,7.7224,6.6544,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,4500,6.5404,5.6764,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,5000,5.5944,4.9096,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,5500,4.9619,4.3991,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,6000,4.3724,3.9017,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,6500,3.8612,3.4311,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,7000,3.4863,3.1066,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,7500,3.1780,2.7959,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,8000,2.8543,2.5150,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,8500,2.6025,2.3218,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,9000,2.3669,2.1177,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,9500,2.1366,1.8821,101
+Homogeneous,Vanilla,Homogeneous_Vanilla_5x128_soap_rad,10000,1.9635,1.7290,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,0,3520.5737,3408.7653,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,500,486.8992,454.5694,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,1000,153.9115,138.5274,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,1500,64.6917,54.8836,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,2000,37.7366,34.5546,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,2500,33.7317,30.9907,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,3000,19.4395,17.4223,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,3500,13.3162,11.8229,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,4000,10.6550,9.4057,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,4500,8.6759,7.5962,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,5000,7.4652,6.5124,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,5500,6.5903,5.7616,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,6000,5.7862,5.0841,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,6500,5.1714,4.5346,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,7000,4.6554,4.0840,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,7500,4.2218,3.7430,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,8000,3.8421,3.4147,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,8500,3.5026,3.0841,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,9000,3.2410,2.8456,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,9500,2.9818,2.6512,101
+Homogeneous,Fourier-feature,Homogeneous_FourierXB_5x128_T1.0_soap_rad,10000,2.7164,2.4193,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,0,2035.7400,1936.7020,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,500,326.3699,289.2888,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,1000,72.7653,66.5509,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,1500,13.7897,11.7708,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,2000,7.9733,6.7731,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,2500,5.3083,4.5992,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,3000,4.1105,3.5903,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,3500,3.2074,2.8018,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,4000,2.6797,2.3378,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,4500,2.3514,2.0740,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,5000,2.0669,1.8232,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,5500,1.7937,1.5750,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,6000,1.5955,1.3992,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,6500,1.4187,1.2547,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,7000,1.2738,1.1241,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,7500,1.1781,1.0503,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,8000,1.0611,0.9427,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,8500,0.9994,0.8830,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,9000,0.9059,0.7994,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,9500,0.7960,0.7016,101
+Homogeneous,PirateNet,Homogeneous_Pirate_2x64_soap_rad,10000,0.7349,0.6481,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,0,2662.6127,2551.3126,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,500,219.2807,171.9000,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,1000,271.1487,234.0041,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,1500,56.0180,48.5854,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,2000,26.8806,23.8416,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,2500,19.4298,17.5187,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,3000,14.1747,12.4645,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,3500,11.4526,9.8591,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,4000,10.4259,8.8469,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,4500,9.7998,8.3640,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,5000,9.6871,8.2348,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,5500,9.0326,7.6548,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,6000,9.6264,8.2366,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,6500,8.6885,7.5159,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,7000,8.2279,7.0185,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,7500,7.3259,6.1111,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,8000,7.2173,5.9947,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,8500,7.0719,5.9816,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,9000,6.5145,5.4751,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,9500,6.0264,4.9374,101
+Two-layer,Vanilla,TwoLayer_Vanilla_5x128_T1.0_soap_rad,10000,5.7778,4.7273,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,0,3514.6058,3402.1407,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,500,576.7435,540.4664,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,1000,161.2073,146.8596,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,1500,69.6429,58.8069,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,2000,44.8422,38.6852,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,2500,37.1786,34.6279,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,3000,23.8172,21.1998,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,3500,16.4264,14.1777,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,4000,13.1216,11.1742,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,4500,11.6652,10.0490,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,5000,10.5517,8.9860,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,5500,9.5663,7.8260,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,6000,9.0194,7.3748,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,6500,7.9946,6.6965,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,7000,7.7289,6.4343,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,7500,7.7465,6.2091,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,8000,7.5530,6.0219,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,8500,7.2940,5.8859,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,9000,6.9099,5.5820,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,9500,6.2125,4.9935,101
+Two-layer,Fourier-feature,TwoLayer_FourierXB_5x128_T1.0_soap_rad,10000,5.7404,4.5607,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,0,2031.8304,1931.8894,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,500,315.5519,277.9204,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,1000,79.9211,73.2703,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,1500,15.8700,13.3120,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,2000,10.8793,9.1705,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,2500,9.3178,7.6425,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,3000,7.5408,6.1528,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,3500,6.3100,5.2254,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,4000,5.7627,4.7481,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,4500,5.0989,4.1107,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,5000,4.7145,3.8090,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,5500,3.8868,3.0943,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,6000,3.5450,2.8811,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,6500,3.2785,2.7315,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,7000,2.9927,2.4847,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,7500,2.8804,2.3973,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,8000,2.6394,2.1913,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,8500,2.1805,1.8062,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,9000,1.9609,1.6315,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,9500,1.9783,1.6234,101
+Two-layer,PirateNet,TwoLayer_Pirate_2x64_T1.0_soap_rad,10000,1.7767,1.4542,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,0,2655.2685,2542.6688,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,500,178.7869,130.7574,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,1000,284.5336,242.2922,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,1500,78.9246,68.8970,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,2000,36.5107,32.2502,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,2500,53.3324,46.4619,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,3000,49.2369,42.5005,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,3500,40.4068,36.0477,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,4000,43.8428,39.5686,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,4500,36.3040,30.8876,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,5000,35.7451,29.8813,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,5500,34.7406,30.3073,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,6000,32.3403,27.6823,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,6500,30.3659,25.7166,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,7000,28.5657,23.9203,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,7500,27.3115,23.0445,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,8000,26.2048,21.7278,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,8500,22.4714,19.0847,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,9000,21.6043,18.4039,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,9500,23.1397,18.9680,101
+Six-layer,"Vanilla, 1 step per epoch",SixLayer_Vanilla_5x128_T1.0_soap_rad,10000,22.4453,18.4149,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,0,2655.2685,2542.6688,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,500,140.3015,114.2918,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,1000,61.1134,56.1340,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,1500,45.7760,36.4700,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,2000,37.4846,29.5604,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,2500,30.9917,26.1895,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,3000,27.9883,23.0706,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,3500,23.8694,19.4555,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,4000,22.0470,18.0358,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,4500,21.5063,17.8242,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,5000,20.2913,16.6437,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,5500,17.3651,14.2115,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,6000,15.8084,13.1507,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,6500,15.0364,12.6275,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,7000,14.2046,11.9997,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,7500,14.8613,12.5607,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,8000,13.9034,12.0217,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,8500,12.8199,11.2448,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,9000,12.0689,10.6511,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,9500,12.5963,10.8594,101
+Six-layer,Vanilla,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,10000,11.9470,10.4023,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,0,3157.3385,3013.8716,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,500,89.0477,75.7080,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,1000,37.9120,34.7205,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,1500,37.2419,29.8928,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,2000,31.2382,24.2088,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,2500,22.0698,18.5656,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,3000,21.9819,18.4841,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,3500,17.8651,14.8910,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,4000,14.3810,12.2816,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,4500,13.6161,12.0290,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,5000,11.7072,10.3886,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,5500,10.7831,9.1653,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,6000,10.0421,8.5116,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,6500,9.2937,8.0478,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,7000,8.2749,7.1885,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,7500,7.8284,6.6997,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,8000,6.4130,5.5331,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,8500,6.6663,5.7811,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,9000,5.1822,4.5186,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,9500,4.7487,4.0902,101
+Six-layer,Vanilla 9x128,SixLayer_Vanilla_9x128_T1.0_soap_rad,10000,4.1168,3.5355,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,0,3020.4550,2891.2971,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,500,736.5582,698.8040,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,1000,343.7356,320.1692,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,1500,47.4363,39.7094,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,2000,34.1253,29.1858,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,2500,32.6014,27.5648,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,3000,27.6494,23.2580,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,3500,23.0659,19.3711,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,4000,20.1371,16.8975,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,4500,17.9615,15.1294,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,5000,14.9457,12.6694,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,5500,13.4062,11.4419,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,6000,11.4207,9.9692,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,6500,10.1484,8.9604,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,7000,9.2058,8.1715,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,7500,9.4130,8.2538,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,8000,8.1696,7.1184,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,8500,7.8492,6.9519,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,9000,6.4441,5.7161,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,9500,6.4011,5.6321,101
+Six-layer,Fourier-feature 9x128,SixLayer_FourierXB_9x128_T1.0_soap_rad,10000,5.4992,4.8536,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,0,3503.3331,3389.4169,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,500,432.0616,400.1293,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,1000,110.8271,95.5162,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,1500,40.8304,33.8751,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,2000,31.9382,26.0591,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,2500,36.0311,30.8002,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,3000,31.8174,27.4714,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,3500,25.4905,21.4422,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,4000,21.5940,17.7503,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,4500,20.2928,17.0654,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,5000,18.8874,15.7307,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,5500,17.6744,14.6102,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,6000,15.3559,12.8308,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,6500,14.7351,12.1027,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,7000,12.7666,10.7113,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,7500,12.6859,10.6791,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,8000,11.2671,9.6679,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,8500,9.9271,8.6803,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,9000,9.5234,8.3392,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,9500,9.4591,8.3324,101
+Six-layer,Fourier-feature,SixLayer_FourierXB_5x128_T1.0_soap_rad,10000,9.1437,8.0231,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,0,2024.0152,1923.0519,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,500,142.6172,122.1366,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,1000,32.1351,29.3358,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,1500,25.2755,20.4574,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,2000,14.1390,11.5158,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,2500,12.4049,11.0031,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,3000,11.0767,9.8209,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,3500,7.4733,6.5324,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,4000,5.6497,4.8466,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,4500,5.2767,4.6355,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,5000,4.7100,4.1400,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,5500,4.3009,3.7313,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,6000,4.0224,3.4895,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,6500,4.1722,3.6888,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,7000,3.9463,3.4663,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,7500,3.8158,3.3179,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,8000,3.6824,3.2017,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,8500,3.6855,3.2588,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,9000,3.4961,3.0764,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,9500,3.3454,2.9108,101
+Six-layer,PirateNet,SixLayer_Pirate_2x64_T1.0_soap_rad,10000,3.3374,2.9122,101
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,0,2177.9989,2052.9805,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,500,118.2630,87.7680,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,1000,36.7234,31.6661,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,1500,28.1205,19.8484,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,2000,18.7823,12.3184,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,2500,14.8639,10.7820,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,3000,13.1616,9.5985,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,3500,12.3710,9.4321,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,4000,12.1305,9.4946,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,4500,12.4455,9.3622,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,5000,11.8447,8.9086,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,5500,11.0571,8.8527,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,6000,10.6141,8.5105,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,6500,10.9102,8.2677,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,7000,10.5826,8.0985,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,7500,10.5894,8.4022,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,8000,10.2615,8.1015,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,8500,11.3890,8.6598,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,9000,11.1838,8.4637,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,9500,9.8212,7.8983,201
+"Six-layer [0, 2]",PirateNet 2x64,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,10000,9.8226,7.9143,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,0,2308.5315,2163.4928,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,500,448.4778,412.2550,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,1000,76.0197,60.2034,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,1500,55.6886,41.6089,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,2000,27.9218,19.6913,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,2500,19.1096,13.3772,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,3000,16.0358,11.8591,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,3500,15.2189,11.7756,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,4000,14.4423,11.2708,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,4500,13.4508,10.4248,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,5000,12.3568,9.5592,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,5500,12.4253,9.9952,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,6000,11.8721,9.5777,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,6500,11.2660,8.9119,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,7000,11.0435,8.7288,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,7500,11.7232,9.4060,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,8000,11.5395,9.2363,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,8500,11.2098,8.9532,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,9000,11.0467,8.7670,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,9500,11.0494,8.8843,201
+"Six-layer [0, 2]",PirateNet 3x64,SixLayer_Pirate_3x64_T2.0_soap_rad,10000,10.8630,8.7183,201
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,0,1897.1529,1801.7370,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,500,34.1457,31.3793,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,1000,18.3752,16.9559,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,1500,4.4920,3.8422,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,2000,3.0643,2.6331,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,2500,3.3836,2.9964,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,3000,2.6599,2.3438,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,3500,2.0201,1.7468,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,4000,1.5921,1.3711,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,4500,1.6904,1.4814,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,5000,1.0670,0.9104,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,5500,0.7966,0.6804,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,6000,0.6535,0.5489,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,6500,0.6109,0.5109,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,7000,0.5048,0.4176,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,7500,0.5160,0.4272,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,8000,0.4916,0.3975,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,8500,0.4791,0.3883,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,9000,0.4337,0.3505,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,9500,0.4169,0.3405,101
+Six-layer,PirateNet 2x128,SixLayer_Pirate_2x128_T1.0_soap_rad,10000,0.3986,0.3185,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,0,1945.2906,1835.2150,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,500,31.2902,28.9152,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,1000,15.4953,14.1780,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,1500,3.3651,2.9130,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,2000,2.3275,1.9986,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,2500,2.6431,2.3082,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,3000,2.1512,1.8842,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,3500,1.0855,0.9207,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,4000,0.7244,0.5982,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,4500,0.7017,0.5938,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,5000,0.6848,0.5835,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,5500,0.7704,0.6466,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,6000,0.5179,0.4211,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,6500,0.5464,0.4413,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,7000,0.4998,0.4046,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,7500,0.3469,0.2846,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,8000,0.3647,0.3043,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,8500,0.3712,0.3160,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,9000,0.3361,0.2770,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,9500,0.2744,0.2186,101
+Six-layer,PirateNet 3x128,SixLayer_Pirate_3x128_T1.0_soap_rad,10000,0.3421,0.2843,101
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,0,2018.0820,1893.8071,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,500,82.3180,63.0795,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,1000,29.7371,23.3766,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,1500,15.7204,11.3909,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,2000,12.6284,9.4286,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,2500,12.4381,9.6389,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,3000,10.4614,8.0922,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,3500,9.5271,7.7676,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,4000,8.3032,6.7008,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,4500,7.7442,6.0474,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,5000,7.1257,5.3253,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,5500,6.4914,4.9825,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,6000,5.9761,4.4885,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,6500,6.2152,4.5018,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,7000,5.5956,4.1262,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,7500,5.2030,3.9627,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,8000,4.9308,3.8397,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,8500,5.0105,3.8158,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,9000,4.5984,3.5537,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,9500,4.7636,3.5831,201
+"Six-layer [0, 2]",PirateNet 2x128,SixLayer_Pirate_2x128_T2.0_soap_rad,10000,4.5048,3.3835,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,0,2183.2445,2037.2399,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,500,51.2563,43.0342,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,1000,21.1328,16.2791,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,1500,13.1269,10.2961,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,2000,10.3580,8.2654,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,2500,10.5589,8.5413,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,3000,9.1464,7.2408,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,3500,7.8396,6.1054,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,4000,6.1906,4.6162,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,4500,5.9985,4.4699,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,5000,5.1985,3.9232,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,5500,4.8364,3.5102,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,6000,4.1809,3.0976,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,6500,4.0740,3.1020,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,7000,3.7930,2.8708,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,7500,3.6883,2.7894,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,8000,3.6458,2.7460,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,8500,4.3352,3.2576,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,9000,4.1639,3.1510,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,9500,3.1639,2.3606,201
+"Six-layer [0, 2]",PirateNet 3x128,SixLayer_Pirate_3x128_T2.0_soap_rad,10000,3.0008,2.2323,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,0,3675.3647,3504.5216,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,500,154.7542,128.0953,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,1000,65.2802,55.3667,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,1500,62.4719,46.0272,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,2000,57.8261,41.7264,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,2500,49.7030,37.1320,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,3000,39.0968,28.9373,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,3500,26.9144,19.6378,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,4000,22.6378,16.4625,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,4500,18.9206,13.8258,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,5000,16.3756,12.0472,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,5500,14.6246,10.3641,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,6000,13.1830,9.2629,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,6500,12.1949,8.8802,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,7000,11.5792,8.5244,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,7500,11.8217,8.6897,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,8000,11.6873,8.7233,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,8500,11.4506,8.5799,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,9000,11.3646,8.5228,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,9500,10.9549,8.3801,201
+"Six-layer [0, 2]",Vanilla 9x128,SixLayer_Vanilla_9x128_T2.0_soap_rad,10000,10.7033,8.1999,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,0,3244.8023,3084.6620,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,500,961.4738,886.3258,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,1000,494.9430,445.4217,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,1500,181.1888,149.2036,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,2000,99.2351,74.9269,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,2500,69.9330,55.2706,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,3000,58.5222,45.5403,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,3500,48.6536,38.6941,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,4000,41.6227,32.7065,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,4500,41.6074,32.9872,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,5000,34.5113,26.6086,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,5500,28.7784,22.3251,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,6000,23.7896,18.0956,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,6500,21.2811,15.9347,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,7000,19.4557,14.4635,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,7500,18.1871,13.9542,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,8000,16.4779,12.4149,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,8500,15.0582,11.6542,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,9000,14.1402,10.7886,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,9500,12.8921,9.8001,201
+"Six-layer [0, 2]",Fourier-feature 9x128,SixLayer_FourierXB_9x128_T2.0_soap_rad,10000,12.2227,9.2608,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,0,1947.7297,1828.9768,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,500,451.5875,404.1445,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,1000,118.0908,95.3068,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,1500,41.8425,29.6326,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,2000,28.3714,18.9063,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,2500,18.7243,13.7476,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,3000,16.0988,11.8446,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,3500,13.8503,10.2941,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,4000,13.0477,9.7857,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,4500,13.0313,10.0380,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,5000,12.6947,9.7696,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,5500,12.1211,9.0383,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,6000,11.8033,8.8561,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,6500,12.2248,9.3082,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,7000,11.8827,8.9807,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,7500,11.4903,8.4617,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,8000,11.3611,8.4059,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,8500,11.4943,8.8068,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,9000,11.3935,8.7008,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,9500,10.6312,8.2354,201
+"Six-layer [0, 2]","PirateNet 2x64, s = 2",SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,10000,10.5823,8.2124,201

@@ -1,0 +1,4 @@
+run,network,size,t_max,frames,error_percent,magnitude_error_percent,table_3
+TwoLayer_Vanilla_5x128_T1.0_soap_rad,Vanilla,5x128,1.0,101,5.7778,4.7273,5.78
+TwoLayer_FourierXB_5x128_T1.0_soap_rad,Fourier-feature,5x128,1.0,101,5.7404,4.5607,5.74
+TwoLayer_Pirate_2x64_T1.0_soap_rad,PirateNet,2x64,1.0,101,1.7767,1.4542,1.78

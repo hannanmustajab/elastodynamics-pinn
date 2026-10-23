@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this code or the trained networks, please cite the paper and this repository."
+type: software
+title: "Adaptive PINNs for elastic wave propagation in heterogeneous media: code and trained networks"
+version: "1.0.0"
+date-released: "2026-10-23"
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/hannanmustajab/elastodynamics-pinn"
+abstract: >-
+  Training scripts, network definitions, SOAP optimizer, training logs and trained networks of the 24 runs of the
+  paper "Adaptive Physics-Informed Neural Networks (PINNs) for Elastic Wave Propagation in Heterogeneous Media",
+  with the scripts that compute the DEVITO reference solutions, score the networks and draw the figures.
+keywords:
+  - physics-informed neural networks
+  - elastic wave propagation
+  - PirateNet
+  - SOAP optimizer
+  - residual-based adaptive sampling
+  - Marmousi2
+authors:
+  - given-names: "Abdul Hannan"
+    family-names: "Mustajab"
+    email: "abdul-hannan.mustajab@ifg.uni-kiel.de"
+    affiliation: "Geomechanics and Geotechnics, Kiel University, Kiel, Germany"
+  - given-names: "Frank"
+    family-names: "Wuttke"
+    affiliation: "Geomechanics and Geotechnics, Kiel University, Kiel, Germany"
+  - given-names: "Ayra Riaz"
+    family-names: "Khan"
+    affiliation: "Department of Computer Engineering, Aligarh Muslim University, Aligarh, India"
+  - given-names: "Zarghaam Haider"
+    family-names: "Rizvi"
+    affiliation: "Numerical Modelling and Physics Infused Intelligence, GeoAnalysis Engineering, Kiel, Germany"

@@ -1,0 +1,25 @@
+benchmark_folder,run,benchmark,network,size,class,layers,width,t_max,reference,machine,table_error_percent
+homogeneous,Homogeneous_Vanilla_5x128_soap_rad,Homogeneous,Vanilla,5x128,NeuralNet,5,128,1.0,homogeneous,RTX 5090,1.96
+homogeneous,Homogeneous_FourierXB_5x128_T1.0_soap_rad,Homogeneous,Fourier-feature,5x128,FourierNeuralNet,5,128,1.0,homogeneous,RTX 5090,2.72
+homogeneous,Homogeneous_Pirate_2x64_soap_rad,Homogeneous,PirateNet,2x64,PirateNet,2,64,1.0,homogeneous,RTX 5090,0.73
+two_layer,TwoLayer_Vanilla_5x128_T1.0_soap_rad,Two-layer,Vanilla,5x128,NeuralNet,5,128,1.0,two_layer,H100 (nesh cluster),5.78
+two_layer,TwoLayer_FourierXB_5x128_T1.0_soap_rad,Two-layer,Fourier-feature,5x128,FourierNeuralNet,5,128,1.0,two_layer,H100 (nesh cluster),5.74
+two_layer,TwoLayer_Pirate_2x64_T1.0_soap_rad,Two-layer,PirateNet,2x64,PirateNet,2,64,1.0,two_layer,V100 (nesh cluster),1.78
+six_layer,SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,Six-layer t_max=1,Vanilla,5x128,NeuralNet,5,128,1.0,six_layer,RTX 5090,11.95
+six_layer,SixLayer_Vanilla_5x128_T1.0_soap_rad,Six-layer t_max=1,Vanilla (1 batch per epoch),5x128,NeuralNet,5,128,1.0,six_layer,H100 (nesh cluster),
+six_layer,SixLayer_FourierXB_5x128_T1.0_soap_rad,Six-layer t_max=1,Fourier-feature,5x128,FourierNeuralNet,5,128,1.0,six_layer,V100 (nesh cluster),9.14
+six_layer,SixLayer_Vanilla_9x128_T1.0_soap_rad,Six-layer t_max=1,Vanilla,9x128,NeuralNet,9,128,1.0,six_layer,RTX 5090,4.12
+six_layer,SixLayer_FourierXB_9x128_T1.0_soap_rad,Six-layer t_max=1,Fourier-feature,9x128,FourierNeuralNet,9,128,1.0,six_layer,RTX 5090,5.50
+six_layer,SixLayer_Pirate_2x64_T1.0_soap_rad,Six-layer t_max=1,PirateNet,2x64,PirateNet,2,64,1.0,six_layer,V100 (nesh cluster),3.34
+six_layer,SixLayer_Pirate_2x128_T1.0_soap_rad,Six-layer t_max=1,PirateNet,2x128,PirateNet,2,128,1.0,six_layer,V100 (nesh cluster),0.40
+six_layer,SixLayer_Pirate_3x128_T1.0_soap_rad,Six-layer t_max=1,PirateNet,3x128,PirateNet,3,128,1.0,six_layer,V100 (nesh cluster),0.34
+six_layer,SixLayer_Vanilla_9x128_T2.0_soap_rad,Six-layer t_max=2,Vanilla,9x128,NeuralNet,9,128,2.0,six_layer,H100 (nesh cluster),10.70
+six_layer,SixLayer_FourierXB_9x128_T2.0_soap_rad,Six-layer t_max=2,Fourier-feature,9x128,FourierNeuralNet,9,128,2.0,six_layer,H100 (nesh cluster),12.22
+six_layer,SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,Six-layer t_max=2,PirateNet,2x64,PirateNet,2,64,2.0,six_layer,RTX 5090,9.82
+six_layer,SixLayer_Pirate_3x64_T2.0_soap_rad,Six-layer t_max=2,PirateNet,3x64,PirateNet,3,64,2.0,six_layer,V100 (nesh cluster),10.86
+six_layer,SixLayer_Pirate_2x128_T2.0_soap_rad,Six-layer t_max=2,PirateNet,2x128,PirateNet,2,128,2.0,six_layer,V100 (nesh cluster),4.50
+six_layer,SixLayer_Pirate_3x128_T2.0_soap_rad,Six-layer t_max=2,PirateNet,3x128,PirateNet,3,128,2.0,six_layer,V100 (nesh cluster) to epoch 5450; RTX 5090 from epoch 5000,3.00
+six_layer,SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,Six-layer t_max=2,PirateNet (s=2),2x64,PirateNet,2,64,2.0,six_layer,RTX 5090,
+marmousi2,Marmousi2_s010_Vanilla_9x128_T1.0_soap_rad,Marmousi2,Vanilla,9x128,NeuralNet,9,128,1.0,marmousi2_s010,V100 (nesh cluster),20.71
+marmousi2,Marmousi2_s010_FourierXB_9x128_T1.0_soap_rad,Marmousi2,Fourier-feature,9x128,FourierNeuralNet,9,128,1.0,marmousi2_s010,V100 (nesh cluster),18.25
+marmousi2,Marmousi2_s010_Pirate_3x128_T1.0_soap_rad,Marmousi2,PirateNet,3x128,PirateNet,3,128,1.0,marmousi2_s010,RTX 5090,1.67

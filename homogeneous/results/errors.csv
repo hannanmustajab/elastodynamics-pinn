@@ -1,0 +1,4 @@
+run,network,size,t_max,frames,error_percent,magnitude_error_percent,table_3
+Homogeneous_Vanilla_5x128_soap_rad,Vanilla,5x128,1.0,101,1.9635,1.7290,1.96
+Homogeneous_FourierXB_5x128_T1.0_soap_rad,Fourier-feature,5x128,1.0,101,2.7164,2.4193,2.72
+Homogeneous_Pirate_2x64_soap_rad,PirateNet,2x64,1.0,101,0.7349,0.6481,0.73

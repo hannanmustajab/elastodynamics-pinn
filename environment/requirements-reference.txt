@@ -1,0 +1,5 @@
+# DEVITO reference solutions (scripts/diagnostics/devito_check.py, devito_marmousi2.py).
+# The references of the paper were computed with DEVITO 4.8.14; a C compiler with OpenMP is needed.
+devito==4.8.14
+numpy>=1.26
+scipy>=1.11

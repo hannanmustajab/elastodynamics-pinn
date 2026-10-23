@@ -1,0 +1,913 @@
+################################################################################################
+Configuration started...
+Running simulation with short time t1 = 0.2
+Using device: cuda
+Model Configuration:
+  Number of layers: 5
+  Number of neurons: 128
+  Scale: 1
+  Mapping size: 32
+  Number of interior points: 70000
+
+Optimizer Configuration:
+  Learning rate (LBFGS): 2.0
+  Max iterations: 200
+  Max evaluations: 200
+  History size: 100
+
+Your runtime has 67.3 gigabytes of available RAM
+You are using a high-RAM runtime!
+################################################################################################
+(512, 512) (512, 512) (512, 512)
+################################################################################################
+RUN CONFIG
+  Run name: homogeneous_vanilla_5x128_T1.0_soap_rad
+  Architecture: Vanilla MLP (NeuralNet)
+  Activation: sine
+  Network size: 5 hidden layers x 128
+  No Fourier embedding. Dense layers: Glorot uniform with gain 5/3, zero bias; sine activation set in global_AF.py
+  Hard-constraint time scale t1: 0.2
+  Optimizer: SOAP, lr 0.001 after a linear warm-up from 0 over 1000 epochs (1000 steps), then times 0.9 every 500 steps; betas (0.99, 0.999), no weight decay, preconditioner updated every 1 step(s)
+  Epochs: 10000, each one pass over the collocation set and the boundary points in 1 shuffled batches, one optimizer step per batch
+  Resampling (RAD): every 1000 epochs the whole collocation set is drawn anew from 2000000 uniform candidates, probability ~ r^2.0 / mean + 1.0, r clipped at its 99th percentile
+  Collocation points: 70000 Sobol for t > 0.3 + 4000 Sobol for t <= 0.3 + 22000 source region + 4000 source region at t=0 + 0 uniform at t=0 = 100000
+  Source region: t <= 0.3, |x| and |y| <= 0.75; points at t=0: |x| and |y| <= 0.4
+  Residual: rho u_tt - div(sigma), lambda and mu evaluated from the differentiable input
+  Initial displacement scaled by the analytic peak exp(-1/2)/sigma (no batch maximum)
+  Absorbing boundary term: 2000 Sobol points per edge, weight 100.0; loss = mean(PDE residual^2) + weight * mean(boundary residual^2)
+  Medium: homogeneous, lambda = 20, mu = 30, rho = 100
+  Seeds: script torch.manual_seed(128); network weight initialization seed 42
+  Training windows [0, T] for T in: [1.0]
+  First leg starts from: None
+  Reference frames: /home/hannan/Desktop/PhD/Elastic_PirateNet_Paper/reference/reference_homogeneous/snapshots_x
+################################################################################################
+
+=========================== Training started ===================================================
+
+=== Training on [0, 1.00] ===
+Experiment path: experiments/full_time_ext_tmax_1.0/
+tensor([[ 0.0000,  1.0000],
+        [-1.5000,  1.5000],
+        [-1.5000,  1.5000]])
+Collocation points: 70000 for t > 0.3, 4000 uniform for t <= 0.3, 0 uniform at t=0, 22000 source region, 4000 source region at t=0, total 100000
+NeuralNet(
+  (activation): Sine()
+  (input_layer): Linear(in_features=3, out_features=128, bias=True)
+  (hidden_layers): ModuleList(
+    (0-3): 4 x Linear(in_features=128, out_features=128, bias=True)
+  )
+  (output_layer): Linear(in_features=128, out_features=2, bias=True)
+)
+0.2
+Collocation points: 70000 for t > 0.3, 4000 uniform for t <= 0.3, 0 uniform at t=0, 22000 source region, 4000 source region at t=0, total 100000
+1
+Boundary points: 8000 (2000 per edge)
+SOAP epochs in this job: 10000
+Training started...
+/home/hannan/anaconda3/envs/pinn/lib/python3.10/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Average Relative L2 Error: 25.550371
+Energy differences saved to experiments/full_time_ext_tmax_1.0/energy_difference_5_128_mapping_32_0.pkl
+Plot saved to experiments/full_time_ext_tmax_1.0/before.png
+SOAP: 10000 epochs of 1 steps, 100000 collocation and 8000 boundary points per step
+Monitoring after epoch 0: PDE term on the current collocation points 32132660.00000, on 200000 fixed uniform test points 31689918.00000
+Average RMSE: 1.5953
+Average RRMSE: 23.8501
+Average Relative L2: 23.8501 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 1.
+Epoch 0 - Total loss: 39452904.0
+  PDE term: 32132656.00000  boundary term (unweighted): 73202.46094
+  Means over the 1 batches of the epoch. Learning rate 1.000e-06, 15 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 50 - Total loss: 36272948.0
+  PDE term: 29571268.00000  boundary term (unweighted): 67016.80469
+  Means over the 1 batches of the epoch. Learning rate 5.100e-05, 28 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 100 - Total loss: 27303484.0
+  PDE term: 22382484.00000  boundary term (unweighted): 49210.00391
+  Means over the 1 batches of the epoch. Learning rate 1.010e-04, 41 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 150 - Total loss: 13864186.0
+  PDE term: 11523368.00000  boundary term (unweighted): 23408.18359
+  Means over the 1 batches of the epoch. Learning rate 1.510e-04, 54 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 200 - Total loss: 3632123.25
+  PDE term: 2966763.50000  boundary term (unweighted): 6653.59717
+  Means over the 1 batches of the epoch. Learning rate 2.010e-04, 67 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 250 - Total loss: 3790942.75
+  PDE term: 2878129.25000  boundary term (unweighted): 9128.13477
+  Means over the 1 batches of the epoch. Learning rate 2.510e-04, 80 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 300 - Total loss: 2538030.75
+  PDE term: 2278214.25000  boundary term (unweighted): 2598.16602
+  Means over the 1 batches of the epoch. Learning rate 3.010e-04, 94 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 350 - Total loss: 1542573.125
+  PDE term: 1377584.25000  boundary term (unweighted): 1649.88843
+  Means over the 1 batches of the epoch. Learning rate 3.510e-04, 107 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 400 - Total loss: 1377049.375
+  PDE term: 1313742.00000  boundary term (unweighted): 633.07355
+  Means over the 1 batches of the epoch. Learning rate 4.010e-04, 120 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 450 - Total loss: 1239217.875
+  PDE term: 1198001.50000  boundary term (unweighted): 412.16339
+  Means over the 1 batches of the epoch. Learning rate 4.510e-04, 133 s in this job, GPU memory peak so far: 14.3 GB
+Monitoring after epoch 500: PDE term on the current collocation points 1174301.75000, on 200000 fixed uniform test points 198592.06250
+Average RMSE: 0.1069
+Average RRMSE: 1.5925
+Average Relative L2: 1.5925 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 501.
+Epoch 500 - Total loss: 1191859.375
+  PDE term: 1174301.75000  boundary term (unweighted): 175.57585
+  Means over the 1 batches of the epoch. Learning rate 5.010e-04, 161 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 550 - Total loss: 1177387.125
+  PDE term: 1167449.25000  boundary term (unweighted): 99.37843
+  Means over the 1 batches of the epoch. Learning rate 5.510e-04, 174 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 600 - Total loss: 1170922.875
+  PDE term: 1163469.75000  boundary term (unweighted): 74.53153
+  Means over the 1 batches of the epoch. Learning rate 6.010e-04, 187 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 650 - Total loss: 1166144.125
+  PDE term: 1161564.12500  boundary term (unweighted): 45.79987
+  Means over the 1 batches of the epoch. Learning rate 6.510e-04, 201 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 700 - Total loss: 1161218.75
+  PDE term: 1158404.75000  boundary term (unweighted): 28.13998
+  Means over the 1 batches of the epoch. Learning rate 7.010e-04, 214 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 750 - Total loss: 1157259.875
+  PDE term: 1155420.25000  boundary term (unweighted): 18.39635
+  Means over the 1 batches of the epoch. Learning rate 7.510e-04, 227 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 800 - Total loss: 1151619.125
+  PDE term: 1149980.37500  boundary term (unweighted): 16.38765
+  Means over the 1 batches of the epoch. Learning rate 8.010e-04, 240 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 850 - Total loss: 1136279.625
+  PDE term: 1134325.62500  boundary term (unweighted): 19.53941
+  Means over the 1 batches of the epoch. Learning rate 8.510e-04, 253 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 900 - Total loss: 1051141.75
+  PDE term: 1044569.25000  boundary term (unweighted): 65.72483
+  Means over the 1 batches of the epoch. Learning rate 9.010e-04, 264 s in this job, GPU memory peak so far: 14.3 GB
+Epoch 950 - Total loss: 912998.5
+  PDE term: 902063.18750  boundary term (unweighted): 109.35321
+  Means over the 1 batches of the epoch. Learning rate 9.510e-04, 271 s in this job, GPU memory peak so far: 14.3 GB
+Monitoring after epoch 1000: PDE term on the current collocation points 494100.37500, on 200000 fixed uniform test points 216893.59375
+Average RMSE: 0.1360
+Average RRMSE: 2.0119
+Average Relative L2: 2.0119 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 1001.
+Resampling at epoch 1000: residual magnitude on 2000000 uniform candidates: median 190.839, mean 342.089, 99th percentile 2565.593, max 15897.874
+  New collocation set of 100000 points (uniform candidates in brackets): 40.3% (30.0%) with t <= 0.3, 0.0% (0.0%) within 0.02 of an interface, 0.00% (0.00%) both
+  Residual and point maps: experiments/full_time_ext_tmax_1.0/plots/rad/rad_epoch_1000.png
+Epoch 1000 - Total loss: 1495424.125
+  PDE term: 1476051.87500  boundary term (unweighted): 193.72296
+  Means over the 1 batches of the epoch. Learning rate 9.998e-04, 297 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1050 - Total loss: 843757.25
+  PDE term: 818636.37500  boundary term (unweighted): 251.20879
+  Means over the 1 batches of the epoch. Learning rate 9.893e-04, 310 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1100 - Total loss: 573597.4375
+  PDE term: 554081.25000  boundary term (unweighted): 195.16193
+  Means over the 1 batches of the epoch. Learning rate 9.789e-04, 323 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1150 - Total loss: 414504.4375
+  PDE term: 404520.09375  boundary term (unweighted): 99.84343
+  Means over the 1 batches of the epoch. Learning rate 9.687e-04, 336 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1200 - Total loss: 289643.46875
+  PDE term: 278864.96875  boundary term (unweighted): 107.78505
+  Means over the 1 batches of the epoch. Learning rate 9.585e-04, 349 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1250 - Total loss: 216318.67188
+  PDE term: 207739.92188  boundary term (unweighted): 85.78745
+  Means over the 1 batches of the epoch. Learning rate 9.485e-04, 362 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1300 - Total loss: 151637.625
+  PDE term: 146720.59375  boundary term (unweighted): 49.17031
+  Means over the 1 batches of the epoch. Learning rate 9.385e-04, 375 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1350 - Total loss: 105447.46875
+  PDE term: 101537.92188  boundary term (unweighted): 39.09550
+  Means over the 1 batches of the epoch. Learning rate 9.287e-04, 388 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1400 - Total loss: 76938.39062
+  PDE term: 73617.40625  boundary term (unweighted): 33.20983
+  Means over the 1 batches of the epoch. Learning rate 9.190e-04, 401 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1450 - Total loss: 57251.89453
+  PDE term: 55354.32031  boundary term (unweighted): 18.97573
+  Means over the 1 batches of the epoch. Learning rate 9.093e-04, 414 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 1500: PDE term on the current collocation points 41152.16797, on 200000 fixed uniform test points 19578.15430
+Average RMSE: 0.0547
+Average RRMSE: 0.8012
+Average Relative L2: 0.8012 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 1501.
+Epoch 1500 - Total loss: 42640.38281
+  PDE term: 41152.17188  boundary term (unweighted): 14.88210
+  Means over the 1 batches of the epoch. Learning rate 8.998e-04, 443 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1550 - Total loss: 33513.72266
+  PDE term: 32364.48633  boundary term (unweighted): 11.49236
+  Means over the 1 batches of the epoch. Learning rate 8.904e-04, 456 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1600 - Total loss: 26703.17969
+  PDE term: 25800.45508  boundary term (unweighted): 9.02725
+  Means over the 1 batches of the epoch. Learning rate 8.810e-04, 469 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1650 - Total loss: 21590.10938
+  PDE term: 20995.57227  boundary term (unweighted): 5.94538
+  Means over the 1 batches of the epoch. Learning rate 8.718e-04, 482 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1700 - Total loss: 17913.34375
+  PDE term: 17449.23438  boundary term (unweighted): 4.64110
+  Means over the 1 batches of the epoch. Learning rate 8.627e-04, 495 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1750 - Total loss: 15093.10742
+  PDE term: 14741.36523  boundary term (unweighted): 3.51742
+  Means over the 1 batches of the epoch. Learning rate 8.536e-04, 508 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1800 - Total loss: 12956.09766
+  PDE term: 12686.56445  boundary term (unweighted): 2.69533
+  Means over the 1 batches of the epoch. Learning rate 8.447e-04, 521 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1850 - Total loss: 11287.36426
+  PDE term: 11036.44434  boundary term (unweighted): 2.50920
+  Means over the 1 batches of the epoch. Learning rate 8.358e-04, 534 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1900 - Total loss: 9937.95801
+  PDE term: 9717.86621  boundary term (unweighted): 2.20092
+  Means over the 1 batches of the epoch. Learning rate 8.271e-04, 547 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 1950 - Total loss: 8855.60254
+  PDE term: 8668.91016  boundary term (unweighted): 1.86692
+  Means over the 1 batches of the epoch. Learning rate 8.184e-04, 560 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 2000: PDE term on the current collocation points 7801.05176, on 200000 fixed uniform test points 4219.96484
+Average RMSE: 0.0176
+Average RRMSE: 0.2576
+Average Relative L2: 0.2576 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 2001.
+Resampling at epoch 2000: residual magnitude on 2000000 uniform candidates: median 46.047, mean 64.800, 99th percentile 319.100, max 1594.625
+  New collocation set of 100000 points (uniform candidates in brackets): 32.6% (30.0%) with t <= 0.3, 0.0% (0.0%) within 0.02 of an interface, 0.00% (0.00%) both
+  Residual and point maps: experiments/full_time_ext_tmax_1.0/plots/rad/rad_epoch_2000.png
+Epoch 2000 - Total loss: 14578.09082
+  PDE term: 14415.26758  boundary term (unweighted): 1.62823
+  Means over the 1 batches of the epoch. Learning rate 8.098e-04, 593 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2050 - Total loss: 11120.72461
+  PDE term: 10895.28809  boundary term (unweighted): 2.25436
+  Means over the 1 batches of the epoch. Learning rate 8.013e-04, 606 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2100 - Total loss: 9245.95605
+  PDE term: 8993.64160  boundary term (unweighted): 2.52315
+  Means over the 1 batches of the epoch. Learning rate 7.929e-04, 619 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2150 - Total loss: 7916.22168
+  PDE term: 7687.35205  boundary term (unweighted): 2.28870
+  Means over the 1 batches of the epoch. Learning rate 7.846e-04, 632 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2200 - Total loss: 6844.88525
+  PDE term: 6647.04492  boundary term (unweighted): 1.97840
+  Means over the 1 batches of the epoch. Learning rate 7.764e-04, 645 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2250 - Total loss: 6041.01904
+  PDE term: 5864.68896  boundary term (unweighted): 1.76330
+  Means over the 1 batches of the epoch. Learning rate 7.683e-04, 658 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2300 - Total loss: 5399.19385
+  PDE term: 5254.57275  boundary term (unweighted): 1.44621
+  Means over the 1 batches of the epoch. Learning rate 7.602e-04, 671 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2350 - Total loss: 4876.6958
+  PDE term: 4755.04932  boundary term (unweighted): 1.21646
+  Means over the 1 batches of the epoch. Learning rate 7.523e-04, 684 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2400 - Total loss: 4442.6709
+  PDE term: 4336.17285  boundary term (unweighted): 1.06498
+  Means over the 1 batches of the epoch. Learning rate 7.444e-04, 697 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2450 - Total loss: 4085.38916
+  PDE term: 3990.61108  boundary term (unweighted): 0.94778
+  Means over the 1 batches of the epoch. Learning rate 7.366e-04, 710 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 2500: PDE term on the current collocation points 3690.12500, on 200000 fixed uniform test points 1601.96570
+Average RMSE: 0.0110
+Average RRMSE: 0.1619
+Average Relative L2: 0.1619 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 2501.
+Epoch 2500 - Total loss: 3778.37573
+  PDE term: 3690.12524  boundary term (unweighted): 0.88251
+  Means over the 1 batches of the epoch. Learning rate 7.288e-04, 737 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2550 - Total loss: 3515.6499
+  PDE term: 3431.43164  boundary term (unweighted): 0.84218
+  Means over the 1 batches of the epoch. Learning rate 7.212e-04, 743 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2600 - Total loss: 3285.20923
+  PDE term: 3206.97656  boundary term (unweighted): 0.78233
+  Means over the 1 batches of the epoch. Learning rate 7.136e-04, 755 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2650 - Total loss: 3081.71704
+  PDE term: 3008.07007  boundary term (unweighted): 0.73647
+  Means over the 1 batches of the epoch. Learning rate 7.062e-04, 768 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2700 - Total loss: 2900.76709
+  PDE term: 2831.45459  boundary term (unweighted): 0.69312
+  Means over the 1 batches of the epoch. Learning rate 6.988e-04, 781 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2750 - Total loss: 2738.66138
+  PDE term: 2673.72510  boundary term (unweighted): 0.64936
+  Means over the 1 batches of the epoch. Learning rate 6.914e-04, 794 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2800 - Total loss: 2593.12256
+  PDE term: 2531.76978  boundary term (unweighted): 0.61353
+  Means over the 1 batches of the epoch. Learning rate 6.842e-04, 807 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2850 - Total loss: 2461.41821
+  PDE term: 2403.30566  boundary term (unweighted): 0.58112
+  Means over the 1 batches of the epoch. Learning rate 6.770e-04, 820 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2900 - Total loss: 2341.47705
+  PDE term: 2286.36401  boundary term (unweighted): 0.55113
+  Means over the 1 batches of the epoch. Learning rate 6.699e-04, 833 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 2950 - Total loss: 2231.93384
+  PDE term: 2179.73242  boundary term (unweighted): 0.52201
+  Means over the 1 batches of the epoch. Learning rate 6.629e-04, 847 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 3000: PDE term on the current collocation points 2082.09619, on 200000 fixed uniform test points 950.25824
+Average RMSE: 0.0071
+Average RRMSE: 0.1048
+Average Relative L2: 0.1048 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 3001.
+Resampling at epoch 3000: residual magnitude on 2000000 uniform candidates: median 25.213, mean 32.542, 99th percentile 134.909, max 827.865
+  New collocation set of 100000 points (uniform candidates in brackets): 34.0% (30.0%) with t <= 0.3, 0.0% (0.0%) within 0.02 of an interface, 0.00% (0.00%) both
+  Residual and point maps: experiments/full_time_ext_tmax_1.0/plots/rad/rad_epoch_3000.png
+Epoch 3000 - Total loss: 2689.25293
+  PDE term: 2639.74121  boundary term (unweighted): 0.49512
+  Means over the 1 batches of the epoch. Learning rate 6.560e-04, 879 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3050 - Total loss: 2384.57422
+  PDE term: 2324.71265  boundary term (unweighted): 0.59862
+  Means over the 1 batches of the epoch. Learning rate 6.491e-04, 892 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3100 - Total loss: 2184.11255
+  PDE term: 2123.98877  boundary term (unweighted): 0.60124
+  Means over the 1 batches of the epoch. Learning rate 6.423e-04, 905 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3150 - Total loss: 2043.72327
+  PDE term: 1984.32092  boundary term (unweighted): 0.59402
+  Means over the 1 batches of the epoch. Learning rate 6.356e-04, 918 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3200 - Total loss: 1926.68896
+  PDE term: 1872.50232  boundary term (unweighted): 0.54187
+  Means over the 1 batches of the epoch. Learning rate 6.289e-04, 931 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3250 - Total loss: 1829.66833
+  PDE term: 1779.14490  boundary term (unweighted): 0.50523
+  Means over the 1 batches of the epoch. Learning rate 6.223e-04, 944 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3300 - Total loss: 1748.50879
+  PDE term: 1703.10938  boundary term (unweighted): 0.45399
+  Means over the 1 batches of the epoch. Learning rate 6.158e-04, 957 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3350 - Total loss: 1675.54175
+  PDE term: 1633.03809  boundary term (unweighted): 0.42504
+  Means over the 1 batches of the epoch. Learning rate 6.093e-04, 970 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3400 - Total loss: 1609.07751
+  PDE term: 1569.12256  boundary term (unweighted): 0.39955
+  Means over the 1 batches of the epoch. Learning rate 6.029e-04, 983 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3450 - Total loss: 1548.29749
+  PDE term: 1511.02734  boundary term (unweighted): 0.37270
+  Means over the 1 batches of the epoch. Learning rate 5.966e-04, 996 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 3500: PDE term on the current collocation points 1456.81177, on 200000 fixed uniform test points 573.94293
+Average RMSE: 0.0048
+Average RRMSE: 0.0713
+Average Relative L2: 0.0713 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 3501.
+Epoch 3500 - Total loss: 1491.88672
+  PDE term: 1456.81177  boundary term (unweighted): 0.35075
+  Means over the 1 batches of the epoch. Learning rate 5.904e-04, 1025 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3550 - Total loss: 1438.89282
+  PDE term: 1405.56592  boundary term (unweighted): 0.33327
+  Means over the 1 batches of the epoch. Learning rate 5.842e-04, 1038 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3600 - Total loss: 1388.84778
+  PDE term: 1356.88586  boundary term (unweighted): 0.31962
+  Means over the 1 batches of the epoch. Learning rate 5.781e-04, 1051 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3650 - Total loss: 1342.2345
+  PDE term: 1311.84680  boundary term (unweighted): 0.30388
+  Means over the 1 batches of the epoch. Learning rate 5.720e-04, 1064 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3700 - Total loss: 1296.62708
+  PDE term: 1267.53528  boundary term (unweighted): 0.29092
+  Means over the 1 batches of the epoch. Learning rate 5.660e-04, 1077 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3750 - Total loss: 1254.64624
+  PDE term: 1226.47473  boundary term (unweighted): 0.28172
+  Means over the 1 batches of the epoch. Learning rate 5.601e-04, 1090 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3800 - Total loss: 1213.27405
+  PDE term: 1186.42151  boundary term (unweighted): 0.26852
+  Means over the 1 batches of the epoch. Learning rate 5.542e-04, 1104 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3850 - Total loss: 1174.4342
+  PDE term: 1148.56384  boundary term (unweighted): 0.25870
+  Means over the 1 batches of the epoch. Learning rate 5.484e-04, 1117 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3900 - Total loss: 1140.89697
+  PDE term: 1115.76062  boundary term (unweighted): 0.25136
+  Means over the 1 batches of the epoch. Learning rate 5.426e-04, 1130 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 3950 - Total loss: 1102.81519
+  PDE term: 1078.74768  boundary term (unweighted): 0.24068
+  Means over the 1 batches of the epoch. Learning rate 5.370e-04, 1143 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 4000: PDE term on the current collocation points 1045.14819, on 200000 fixed uniform test points 429.66644
+Average RMSE: 0.0040
+Average RRMSE: 0.0590
+Average Relative L2: 0.0590 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 4001.
+Resampling at epoch 4000: residual magnitude on 2000000 uniform candidates: median 16.951, mean 21.444, 99th percentile 89.230, max 758.014
+  New collocation set of 100000 points (uniform candidates in brackets): 33.5% (30.0%) with t <= 0.3, 0.0% (0.0%) within 0.02 of an interface, 0.00% (0.00%) both
+  Residual and point maps: experiments/full_time_ext_tmax_1.0/plots/rad/rad_epoch_4000.png
+Epoch 4000 - Total loss: 1344.8114
+  PDE term: 1321.67090  boundary term (unweighted): 0.23140
+  Means over the 1 batches of the epoch. Learning rate 5.313e-04, 1175 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4050 - Total loss: 1239.28442
+  PDE term: 1214.59290  boundary term (unweighted): 0.24692
+  Means over the 1 batches of the epoch. Learning rate 5.258e-04, 1181 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4100 - Total loss: 1182.38721
+  PDE term: 1157.87976  boundary term (unweighted): 0.24507
+  Means over the 1 batches of the epoch. Learning rate 5.202e-04, 1187 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4150 - Total loss: 1133.91333
+  PDE term: 1110.75134  boundary term (unweighted): 0.23162
+  Means over the 1 batches of the epoch. Learning rate 5.148e-04, 1195 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4200 - Total loss: 1091.86816
+  PDE term: 1069.94031  boundary term (unweighted): 0.21928
+  Means over the 1 batches of the epoch. Learning rate 5.094e-04, 1205 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4250 - Total loss: 1055.1416
+  PDE term: 1034.93408  boundary term (unweighted): 0.20208
+  Means over the 1 batches of the epoch. Learning rate 5.041e-04, 1219 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4300 - Total loss: 1022.22455
+  PDE term: 1002.59583  boundary term (unweighted): 0.19629
+  Means over the 1 batches of the epoch. Learning rate 4.988e-04, 1232 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4350 - Total loss: 991.14984
+  PDE term: 972.71661  boundary term (unweighted): 0.18433
+  Means over the 1 batches of the epoch. Learning rate 4.936e-04, 1245 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4400 - Total loss: 962.18579
+  PDE term: 944.55261  boundary term (unweighted): 0.17633
+  Means over the 1 batches of the epoch. Learning rate 4.884e-04, 1258 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4450 - Total loss: 934.64502
+  PDE term: 917.72321  boundary term (unweighted): 0.16922
+  Means over the 1 batches of the epoch. Learning rate 4.833e-04, 1271 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 4500: PDE term on the current collocation points 892.17950, on 200000 fixed uniform test points 326.86679
+Average RMSE: 0.0034
+Average RRMSE: 0.0504
+Average Relative L2: 0.0504 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 4501.
+Epoch 4500 - Total loss: 908.34216
+  PDE term: 892.17987  boundary term (unweighted): 0.16162
+  Means over the 1 batches of the epoch. Learning rate 4.782e-04, 1299 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4550 - Total loss: 883.11511
+  PDE term: 867.47668  boundary term (unweighted): 0.15638
+  Means over the 1 batches of the epoch. Learning rate 4.732e-04, 1312 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4600 - Total loss: 858.83783
+  PDE term: 843.77679  boundary term (unweighted): 0.15061
+  Means over the 1 batches of the epoch. Learning rate 4.682e-04, 1325 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4650 - Total loss: 835.49542
+  PDE term: 820.94366  boundary term (unweighted): 0.14552
+  Means over the 1 batches of the epoch. Learning rate 4.633e-04, 1338 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4700 - Total loss: 812.97089
+  PDE term: 798.91254  boundary term (unweighted): 0.14058
+  Means over the 1 batches of the epoch. Learning rate 4.585e-04, 1351 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4750 - Total loss: 791.13263
+  PDE term: 777.48779  boundary term (unweighted): 0.13645
+  Means over the 1 batches of the epoch. Learning rate 4.537e-04, 1364 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4800 - Total loss: 770.40692
+  PDE term: 757.10205  boundary term (unweighted): 0.13305
+  Means over the 1 batches of the epoch. Learning rate 4.489e-04, 1378 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4850 - Total loss: 750.12982
+  PDE term: 737.17389  boundary term (unweighted): 0.12956
+  Means over the 1 batches of the epoch. Learning rate 4.442e-04, 1391 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4900 - Total loss: 730.69727
+  PDE term: 718.10748  boundary term (unweighted): 0.12590
+  Means over the 1 batches of the epoch. Learning rate 4.395e-04, 1404 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 4950 - Total loss: 711.65131
+  PDE term: 699.45752  boundary term (unweighted): 0.12194
+  Means over the 1 batches of the epoch. Learning rate 4.349e-04, 1417 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 5000: PDE term on the current collocation points 681.28473, on 200000 fixed uniform test points 254.57277
+Average RMSE: 0.0030
+Average RRMSE: 0.0437
+Average Relative L2: 0.0437 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 5001.
+Resampling at epoch 5000: residual magnitude on 2000000 uniform candidates: median 13.030, mean 16.510, 99th percentile 68.020, max 698.401
+  New collocation set of 100000 points (uniform candidates in brackets): 33.9% (30.0%) with t <= 0.3, 0.0% (0.0%) within 0.02 of an interface, 0.00% (0.00%) both
+  Residual and point maps: experiments/full_time_ext_tmax_1.0/plots/rad/rad_epoch_5000.png
+Epoch 5000 - Total loss: 791.06763
+  PDE term: 779.28918  boundary term (unweighted): 0.11778
+  Means over the 1 batches of the epoch. Learning rate 4.304e-04, 1449 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5050 - Total loss: 745.01343
+  PDE term: 732.40112  boundary term (unweighted): 0.12612
+  Means over the 1 batches of the epoch. Learning rate 4.259e-04, 1462 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5100 - Total loss: 711.13666
+  PDE term: 698.75116  boundary term (unweighted): 0.12385
+  Means over the 1 batches of the epoch. Learning rate 4.214e-04, 1475 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5150 - Total loss: 687.15747
+  PDE term: 675.76007  boundary term (unweighted): 0.11397
+  Means over the 1 batches of the epoch. Learning rate 4.170e-04, 1488 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5200 - Total loss: 668.01117
+  PDE term: 656.70013  boundary term (unweighted): 0.11311
+  Means over the 1 batches of the epoch. Learning rate 4.126e-04, 1501 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5250 - Total loss: 649.03833
+  PDE term: 638.40387  boundary term (unweighted): 0.10634
+  Means over the 1 batches of the epoch. Learning rate 4.083e-04, 1514 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5300 - Total loss: 633.08588
+  PDE term: 622.70612  boundary term (unweighted): 0.10380
+  Means over the 1 batches of the epoch. Learning rate 4.040e-04, 1527 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5350 - Total loss: 617.78937
+  PDE term: 607.65167  boundary term (unweighted): 0.10138
+  Means over the 1 batches of the epoch. Learning rate 3.998e-04, 1540 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5400 - Total loss: 603.18848
+  PDE term: 593.27576  boundary term (unweighted): 0.09913
+  Means over the 1 batches of the epoch. Learning rate 3.956e-04, 1553 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5450 - Total loss: 589.41992
+  PDE term: 579.88080  boundary term (unweighted): 0.09539
+  Means over the 1 batches of the epoch. Learning rate 3.914e-04, 1566 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 5500: PDE term on the current collocation points 566.80280, on 200000 fixed uniform test points 198.59283
+Average RMSE: 0.0027
+Average RRMSE: 0.0394
+Average Relative L2: 0.0394 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 5501.
+Epoch 5500 - Total loss: 576.14581
+  PDE term: 566.80292  boundary term (unweighted): 0.09343
+  Means over the 1 batches of the epoch. Learning rate 3.873e-04, 1595 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5550 - Total loss: 563.45166
+  PDE term: 554.36328  boundary term (unweighted): 0.09088
+  Means over the 1 batches of the epoch. Learning rate 3.833e-04, 1608 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5600 - Total loss: 550.8866
+  PDE term: 541.99988  boundary term (unweighted): 0.08887
+  Means over the 1 batches of the epoch. Learning rate 3.793e-04, 1619 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5650 - Total loss: 538.82343
+  PDE term: 530.13257  boundary term (unweighted): 0.08691
+  Means over the 1 batches of the epoch. Learning rate 3.753e-04, 1625 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5700 - Total loss: 527.15955
+  PDE term: 518.62988  boundary term (unweighted): 0.08530
+  Means over the 1 batches of the epoch. Learning rate 3.714e-04, 1631 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5750 - Total loss: 515.67621
+  PDE term: 507.36102  boundary term (unweighted): 0.08315
+  Means over the 1 batches of the epoch. Learning rate 3.675e-04, 1638 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5800 - Total loss: 504.3858
+  PDE term: 496.25851  boundary term (unweighted): 0.08127
+  Means over the 1 batches of the epoch. Learning rate 3.636e-04, 1646 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5850 - Total loss: 493.39166
+  PDE term: 485.45511  boundary term (unweighted): 0.07937
+  Means over the 1 batches of the epoch. Learning rate 3.598e-04, 1659 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5900 - Total loss: 482.76489
+  PDE term: 474.93814  boundary term (unweighted): 0.07827
+  Means over the 1 batches of the epoch. Learning rate 3.560e-04, 1672 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 5950 - Total loss: 472.23743
+  PDE term: 464.57343  boundary term (unweighted): 0.07664
+  Means over the 1 batches of the epoch. Learning rate 3.523e-04, 1685 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 6000: PDE term on the current collocation points 454.68848, on 200000 fixed uniform test points 161.42984
+Average RMSE: 0.0024
+Average RRMSE: 0.0350
+Average Relative L2: 0.0350 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 6001.
+Resampling at epoch 6000: residual magnitude on 2000000 uniform candidates: median 10.228, mean 13.007, 99th percentile 54.479, max 558.828
+  New collocation set of 100000 points (uniform candidates in brackets): 34.1% (30.0%) with t <= 0.3, 0.0% (0.0%) within 0.02 of an interface, 0.00% (0.00%) both
+  Residual and point maps: experiments/full_time_ext_tmax_1.0/plots/rad/rad_epoch_6000.png
+Epoch 6000 - Total loss: 522.82959
+  PDE term: 515.24921  boundary term (unweighted): 0.07580
+  Means over the 1 batches of the epoch. Learning rate 3.486e-04, 1717 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6050 - Total loss: 487.25235
+  PDE term: 478.68130  boundary term (unweighted): 0.08571
+  Means over the 1 batches of the epoch. Learning rate 3.450e-04, 1730 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6100 - Total loss: 467.8735
+  PDE term: 459.64551  boundary term (unweighted): 0.08228
+  Means over the 1 batches of the epoch. Learning rate 3.413e-04, 1743 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6150 - Total loss: 453.39713
+  PDE term: 445.44116  boundary term (unweighted): 0.07956
+  Means over the 1 batches of the epoch. Learning rate 3.378e-04, 1756 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6200 - Total loss: 441.44379
+  PDE term: 433.99600  boundary term (unweighted): 0.07448
+  Means over the 1 batches of the epoch. Learning rate 3.342e-04, 1769 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6250 - Total loss: 430.55154
+  PDE term: 423.27695  boundary term (unweighted): 0.07275
+  Means over the 1 batches of the epoch. Learning rate 3.307e-04, 1782 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6300 - Total loss: 420.88153
+  PDE term: 413.86688  boundary term (unweighted): 0.07015
+  Means over the 1 batches of the epoch. Learning rate 3.272e-04, 1795 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6350 - Total loss: 411.93842
+  PDE term: 405.14838  boundary term (unweighted): 0.06790
+  Means over the 1 batches of the epoch. Learning rate 3.238e-04, 1808 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6400 - Total loss: 403.31436
+  PDE term: 396.69623  boundary term (unweighted): 0.06618
+  Means over the 1 batches of the epoch. Learning rate 3.204e-04, 1821 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6450 - Total loss: 395.14996
+  PDE term: 388.70163  boundary term (unweighted): 0.06448
+  Means over the 1 batches of the epoch. Learning rate 3.171e-04, 1834 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 6500: PDE term on the current collocation points 381.02966, on 200000 fixed uniform test points 132.93721
+Average RMSE: 0.0021
+Average RRMSE: 0.0307
+Average Relative L2: 0.0307 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 6501.
+Epoch 6500 - Total loss: 387.28387
+  PDE term: 381.02975  boundary term (unweighted): 0.06254
+  Means over the 1 batches of the epoch. Learning rate 3.137e-04, 1862 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6550 - Total loss: 379.78845
+  PDE term: 373.67548  boundary term (unweighted): 0.06113
+  Means over the 1 batches of the epoch. Learning rate 3.105e-04, 1875 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6600 - Total loss: 372.32233
+  PDE term: 366.33078  boundary term (unweighted): 0.05992
+  Means over the 1 batches of the epoch. Learning rate 3.072e-04, 1888 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6650 - Total loss: 365.21655
+  PDE term: 359.33310  boundary term (unweighted): 0.05883
+  Means over the 1 batches of the epoch. Learning rate 3.040e-04, 1902 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6700 - Total loss: 357.9313
+  PDE term: 352.16425  boundary term (unweighted): 0.05767
+  Means over the 1 batches of the epoch. Learning rate 3.008e-04, 1915 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6750 - Total loss: 351.13498
+  PDE term: 345.45132  boundary term (unweighted): 0.05684
+  Means over the 1 batches of the epoch. Learning rate 2.976e-04, 1928 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6800 - Total loss: 344.26477
+  PDE term: 338.70639  boundary term (unweighted): 0.05558
+  Means over the 1 batches of the epoch. Learning rate 2.945e-04, 1941 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6850 - Total loss: 338.06079
+  PDE term: 332.56778  boundary term (unweighted): 0.05493
+  Means over the 1 batches of the epoch. Learning rate 2.914e-04, 1954 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6900 - Total loss: 331.24881
+  PDE term: 325.87030  boundary term (unweighted): 0.05379
+  Means over the 1 batches of the epoch. Learning rate 2.884e-04, 1967 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 6950 - Total loss: 325.18738
+  PDE term: 319.88464  boundary term (unweighted): 0.05303
+  Means over the 1 batches of the epoch. Learning rate 2.854e-04, 1980 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 7000: PDE term on the current collocation points 313.54056, on 200000 fixed uniform test points 110.86127
+Average RMSE: 0.0019
+Average RRMSE: 0.0278
+Average Relative L2: 0.0278 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 7001.
+Resampling at epoch 7000: residual magnitude on 2000000 uniform candidates: median 8.478, mean 10.785, 99th percentile 44.638, max 518.164
+  New collocation set of 100000 points (uniform candidates in brackets): 34.5% (30.0%) with t <= 0.3, 0.0% (0.0%) within 0.02 of an interface, 0.00% (0.00%) both
+  Residual and point maps: experiments/full_time_ext_tmax_1.0/plots/rad/rad_epoch_7000.png
+Epoch 7000 - Total loss: 367.4502
+  PDE term: 362.23022  boundary term (unweighted): 0.05220
+  Means over the 1 batches of the epoch. Learning rate 2.824e-04, 2012 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7050 - Total loss: 344.13263
+  PDE term: 337.90192  boundary term (unweighted): 0.06231
+  Means over the 1 batches of the epoch. Learning rate 2.794e-04, 2025 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7100 - Total loss: 329.58469
+  PDE term: 323.82339  boundary term (unweighted): 0.05761
+  Means over the 1 batches of the epoch. Learning rate 2.765e-04, 2038 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7150 - Total loss: 320.97842
+  PDE term: 315.35007  boundary term (unweighted): 0.05628
+  Means over the 1 batches of the epoch. Learning rate 2.736e-04, 2051 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7200 - Total loss: 312.17139
+  PDE term: 306.94342  boundary term (unweighted): 0.05228
+  Means over the 1 batches of the epoch. Learning rate 2.707e-04, 2063 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7250 - Total loss: 304.88202
+  PDE term: 299.86575  boundary term (unweighted): 0.05016
+  Means over the 1 batches of the epoch. Learning rate 2.679e-04, 2069 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7300 - Total loss: 298.39328
+  PDE term: 293.46518  boundary term (unweighted): 0.04928
+  Means over the 1 batches of the epoch. Learning rate 2.651e-04, 2075 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7350 - Total loss: 292.37466
+  PDE term: 287.59317  boundary term (unweighted): 0.04781
+  Means over the 1 batches of the epoch. Learning rate 2.623e-04, 2082 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7400 - Total loss: 286.6488
+  PDE term: 281.97043  boundary term (unweighted): 0.04678
+  Means over the 1 batches of the epoch. Learning rate 2.595e-04, 2088 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7450 - Total loss: 281.20346
+  PDE term: 276.60129  boundary term (unweighted): 0.04602
+  Means over the 1 batches of the epoch. Learning rate 2.568e-04, 2099 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 7500: PDE term on the current collocation points 271.41986, on 200000 fixed uniform test points 92.81818
+Average RMSE: 0.0017
+Average RRMSE: 0.0250
+Average Relative L2: 0.0250 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 7501.
+Epoch 7500 - Total loss: 275.94528
+  PDE term: 271.41992  boundary term (unweighted): 0.04525
+  Means over the 1 batches of the epoch. Learning rate 2.541e-04, 2127 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7550 - Total loss: 270.8403
+  PDE term: 266.39728  boundary term (unweighted): 0.04443
+  Means over the 1 batches of the epoch. Learning rate 2.515e-04, 2140 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7600 - Total loss: 266.25122
+  PDE term: 261.82935  boundary term (unweighted): 0.04422
+  Means over the 1 batches of the epoch. Learning rate 2.488e-04, 2153 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7650 - Total loss: 261.09039
+  PDE term: 256.80835  boundary term (unweighted): 0.04282
+  Means over the 1 batches of the epoch. Learning rate 2.462e-04, 2166 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7700 - Total loss: 256.28986
+  PDE term: 252.07283  boundary term (unweighted): 0.04217
+  Means over the 1 batches of the epoch. Learning rate 2.436e-04, 2179 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7750 - Total loss: 251.7085
+  PDE term: 247.53865  boundary term (unweighted): 0.04170
+  Means over the 1 batches of the epoch. Learning rate 2.411e-04, 2192 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7800 - Total loss: 247.08141
+  PDE term: 242.98019  boundary term (unweighted): 0.04101
+  Means over the 1 batches of the epoch. Learning rate 2.386e-04, 2205 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7850 - Total loss: 242.54442
+  PDE term: 238.50615  boundary term (unweighted): 0.04038
+  Means over the 1 batches of the epoch. Learning rate 2.361e-04, 2218 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7900 - Total loss: 238.41502
+  PDE term: 234.38982  boundary term (unweighted): 0.04025
+  Means over the 1 batches of the epoch. Learning rate 2.336e-04, 2231 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 7950 - Total loss: 233.9969
+  PDE term: 230.04515  boundary term (unweighted): 0.03952
+  Means over the 1 batches of the epoch. Learning rate 2.311e-04, 2244 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 8000: PDE term on the current collocation points 225.87598, on 200000 fixed uniform test points 78.60986
+Average RMSE: 0.0015
+Average RRMSE: 0.0226
+Average Relative L2: 0.0226 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 8001.
+Resampling at epoch 8000: residual magnitude on 2000000 uniform candidates: median 7.037, mean 9.027, 99th percentile 37.604, max 446.664
+  New collocation set of 100000 points (uniform candidates in brackets): 34.7% (30.0%) with t <= 0.3, 0.0% (0.0%) within 0.02 of an interface, 0.00% (0.00%) both
+  Residual and point maps: experiments/full_time_ext_tmax_1.0/plots/rad/rad_epoch_8000.png
+Epoch 8000 - Total loss: 255.59959
+  PDE term: 251.74165  boundary term (unweighted): 0.03858
+  Means over the 1 batches of the epoch. Learning rate 2.287e-04, 2276 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8050 - Total loss: 240.85397
+  PDE term: 236.50127  boundary term (unweighted): 0.04353
+  Means over the 1 batches of the epoch. Learning rate 2.263e-04, 2289 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8100 - Total loss: 231.49904
+  PDE term: 227.29263  boundary term (unweighted): 0.04206
+  Means over the 1 batches of the epoch. Learning rate 2.240e-04, 2302 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8150 - Total loss: 226.04666
+  PDE term: 221.91591  boundary term (unweighted): 0.04131
+  Means over the 1 batches of the epoch. Learning rate 2.216e-04, 2315 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8200 - Total loss: 220.7594
+  PDE term: 216.86719  boundary term (unweighted): 0.03892
+  Means over the 1 batches of the epoch. Learning rate 2.193e-04, 2328 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8250 - Total loss: 216.01398
+  PDE term: 212.21454  boundary term (unweighted): 0.03799
+  Means over the 1 batches of the epoch. Learning rate 2.170e-04, 2342 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8300 - Total loss: 211.89594
+  PDE term: 208.23734  boundary term (unweighted): 0.03659
+  Means over the 1 batches of the epoch. Learning rate 2.147e-04, 2355 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8350 - Total loss: 208.10254
+  PDE term: 204.56856  boundary term (unweighted): 0.03534
+  Means over the 1 batches of the epoch. Learning rate 2.125e-04, 2368 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8400 - Total loss: 204.3997
+  PDE term: 200.93016  boundary term (unweighted): 0.03470
+  Means over the 1 batches of the epoch. Learning rate 2.102e-04, 2381 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8450 - Total loss: 200.86606
+  PDE term: 197.47678  boundary term (unweighted): 0.03389
+  Means over the 1 batches of the epoch. Learning rate 2.080e-04, 2394 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 8500: PDE term on the current collocation points 194.08484, on 200000 fixed uniform test points 66.46539
+Average RMSE: 0.0014
+Average RRMSE: 0.0209
+Average Relative L2: 0.0209 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 8501.
+Epoch 8500 - Total loss: 197.42723
+  PDE term: 194.08481  boundary term (unweighted): 0.03342
+  Means over the 1 batches of the epoch. Learning rate 2.058e-04, 2422 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8550 - Total loss: 194.09077
+  PDE term: 190.80530  boundary term (unweighted): 0.03285
+  Means over the 1 batches of the epoch. Learning rate 2.037e-04, 2435 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8600 - Total loss: 190.81958
+  PDE term: 187.59914  boundary term (unweighted): 0.03220
+  Means over the 1 batches of the epoch. Learning rate 2.016e-04, 2448 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8650 - Total loss: 187.61208
+  PDE term: 184.45032  boundary term (unweighted): 0.03162
+  Means over the 1 batches of the epoch. Learning rate 1.994e-04, 2461 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8700 - Total loss: 184.46747
+  PDE term: 181.36086  boundary term (unweighted): 0.03107
+  Means over the 1 batches of the epoch. Learning rate 1.974e-04, 2474 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8750 - Total loss: 181.39407
+  PDE term: 178.34245  boundary term (unweighted): 0.03052
+  Means over the 1 batches of the epoch. Learning rate 1.953e-04, 2487 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8800 - Total loss: 178.45468
+  PDE term: 175.43208  boundary term (unweighted): 0.03023
+  Means over the 1 batches of the epoch. Learning rate 1.932e-04, 2500 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8850 - Total loss: 175.32535
+  PDE term: 172.36128  boundary term (unweighted): 0.02964
+  Means over the 1 batches of the epoch. Learning rate 1.912e-04, 2513 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8900 - Total loss: 172.41241
+  PDE term: 169.50740  boundary term (unweighted): 0.02905
+  Means over the 1 batches of the epoch. Learning rate 1.892e-04, 2519 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 8950 - Total loss: 169.47624
+  PDE term: 166.62053  boundary term (unweighted): 0.02856
+  Means over the 1 batches of the epoch. Learning rate 1.872e-04, 2526 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 9000: PDE term on the current collocation points 163.79109, on 200000 fixed uniform test points 56.91207
+Average RMSE: 0.0013
+Average RRMSE: 0.0191
+Average Relative L2: 0.0191 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 9001.
+Resampling at epoch 9000: residual magnitude on 2000000 uniform candidates: median 6.084, mean 7.717, 99th percentile 31.570, max 361.101
+  New collocation set of 100000 points (uniform candidates in brackets): 35.0% (30.0%) with t <= 0.3, 0.0% (0.0%) within 0.02 of an interface, 0.00% (0.00%) both
+  Residual and point maps: experiments/full_time_ext_tmax_1.0/plots/rad/rad_epoch_9000.png
+Epoch 9000 - Total loss: 177.74979
+  PDE term: 174.90996  boundary term (unweighted): 0.02840
+  Means over the 1 batches of the epoch. Learning rate 1.853e-04, 2551 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9050 - Total loss: 169.05733
+  PDE term: 165.86972  boundary term (unweighted): 0.03188
+  Means over the 1 batches of the epoch. Learning rate 1.833e-04, 2564 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9100 - Total loss: 162.79245
+  PDE term: 159.83917  boundary term (unweighted): 0.02953
+  Means over the 1 batches of the epoch. Learning rate 1.814e-04, 2577 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9150 - Total loss: 158.03979
+  PDE term: 155.24112  boundary term (unweighted): 0.02799
+  Means over the 1 batches of the epoch. Learning rate 1.795e-04, 2590 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9200 - Total loss: 154.75757
+  PDE term: 152.07707  boundary term (unweighted): 0.02680
+  Means over the 1 batches of the epoch. Learning rate 1.776e-04, 2603 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9250 - Total loss: 151.70583
+  PDE term: 149.11391  boundary term (unweighted): 0.02592
+  Means over the 1 batches of the epoch. Learning rate 1.758e-04, 2616 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9300 - Total loss: 148.90819
+  PDE term: 146.36388  boundary term (unweighted): 0.02544
+  Means over the 1 batches of the epoch. Learning rate 1.739e-04, 2629 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9350 - Total loss: 146.26262
+  PDE term: 143.77994  boundary term (unweighted): 0.02483
+  Means over the 1 batches of the epoch. Learning rate 1.721e-04, 2643 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9400 - Total loss: 143.79617
+  PDE term: 141.34320  boundary term (unweighted): 0.02453
+  Means over the 1 batches of the epoch. Learning rate 1.703e-04, 2656 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9450 - Total loss: 141.40703
+  PDE term: 139.02710  boundary term (unweighted): 0.02380
+  Means over the 1 batches of the epoch. Learning rate 1.685e-04, 2669 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 9500: PDE term on the current collocation points 136.77284, on 200000 fixed uniform test points 48.81596
+Average RMSE: 0.0012
+Average RRMSE: 0.0171
+Average Relative L2: 0.0171 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 9501.
+Epoch 9500 - Total loss: 139.1109
+  PDE term: 136.77284  boundary term (unweighted): 0.02338
+  Means over the 1 batches of the epoch. Learning rate 1.667e-04, 2697 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9550 - Total loss: 136.86047
+  PDE term: 134.56291  boundary term (unweighted): 0.02298
+  Means over the 1 batches of the epoch. Learning rate 1.650e-04, 2710 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9600 - Total loss: 134.65965
+  PDE term: 132.40141  boundary term (unweighted): 0.02258
+  Means over the 1 batches of the epoch. Learning rate 1.633e-04, 2723 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9650 - Total loss: 132.50958
+  PDE term: 130.28665  boundary term (unweighted): 0.02223
+  Means over the 1 batches of the epoch. Learning rate 1.615e-04, 2736 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9700 - Total loss: 130.38531
+  PDE term: 128.20277  boundary term (unweighted): 0.02183
+  Means over the 1 batches of the epoch. Learning rate 1.599e-04, 2749 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9750 - Total loss: 128.39697
+  PDE term: 126.24651  boundary term (unweighted): 0.02150
+  Means over the 1 batches of the epoch. Learning rate 1.582e-04, 2762 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9800 - Total loss: 126.32851
+  PDE term: 124.21152  boundary term (unweighted): 0.02117
+  Means over the 1 batches of the epoch. Learning rate 1.565e-04, 2775 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9850 - Total loss: 124.24825
+  PDE term: 122.16100  boundary term (unweighted): 0.02087
+  Means over the 1 batches of the epoch. Learning rate 1.549e-04, 2788 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9900 - Total loss: 122.24714
+  PDE term: 120.19360  boundary term (unweighted): 0.02054
+  Means over the 1 batches of the epoch. Learning rate 1.533e-04, 2802 s in this job, GPU memory peak so far: 14.4 GB
+Epoch 9950 - Total loss: 120.26379
+  PDE term: 118.24323  boundary term (unweighted): 0.02021
+  Means over the 1 batches of the epoch. Learning rate 1.517e-04, 2815 s in this job, GPU memory peak so far: 14.4 GB
+Monitoring after epoch 10000: PDE term on the current collocation points 116.36564, on 200000 fixed uniform test points 42.22202
+Average RMSE: 0.0011
+Average RRMSE: 0.0157
+Average Relative L2: 0.0157 (over 9/9 time steps with ground truth)
+Model and scheduler state saved at epoch 10001.
+Time step 0.0: Energy Difference = 0.000000
+Time step 0.009999999776482582: Energy Difference = 0.000000
+Time step 0.019999999552965164: Energy Difference = 0.000000
+Time step 0.029999999329447746: Energy Difference = 0.000001
+Time step 0.03999999910593033: Energy Difference = 0.000002
+Time step 0.05000000074505806: Energy Difference = 0.000005
+Time step 0.05999999865889549: Energy Difference = 0.000009
+Time step 0.07000000029802322: Energy Difference = 0.000017
+Time step 0.07999999821186066: Energy Difference = 0.000027
+Time step 0.09000000357627869: Energy Difference = 0.000040
+Time step 0.10000000149011612: Energy Difference = 0.000053
+Time step 0.10999999940395355: Energy Difference = 0.000065
+Time step 0.11999999731779099: Energy Difference = 0.000073
+Time step 0.12999999523162842: Energy Difference = 0.000080
+Time step 0.14000000059604645: Energy Difference = 0.000087
+Time step 0.15000000596046448: Energy Difference = 0.000093
+Time step 0.1599999964237213: Energy Difference = 0.000098
+Time step 0.17000000178813934: Energy Difference = 0.000100
+Time step 0.18000000715255737: Energy Difference = 0.000101
+Time step 0.1899999976158142: Energy Difference = 0.000100
+Time step 0.20000000298023224: Energy Difference = 0.000100
+Time step 0.20999999344348907: Energy Difference = 0.000102
+Time step 0.2199999988079071: Energy Difference = 0.000106
+Time step 0.23000000417232513: Energy Difference = 0.000114
+Time step 0.23999999463558197: Energy Difference = 0.000125
+Time step 0.25: Energy Difference = 0.000137
+Time step 0.25999999046325684: Energy Difference = 0.000151
+Time step 0.27000001072883606: Energy Difference = 0.000165
+Time step 0.2800000011920929: Energy Difference = 0.000178
+Time step 0.28999999165534973: Energy Difference = 0.000190
+Time step 0.30000001192092896: Energy Difference = 0.000201
+Time step 0.3100000023841858: Energy Difference = 0.000212
+Time step 0.3199999928474426: Energy Difference = 0.000224
+Time step 0.33000001311302185: Energy Difference = 0.000237
+Time step 0.3400000035762787: Energy Difference = 0.000251
+Time step 0.3499999940395355: Energy Difference = 0.000267
+Time step 0.36000001430511475: Energy Difference = 0.000283
+Time step 0.3700000047683716: Energy Difference = 0.000299
+Time step 0.3799999952316284: Energy Difference = 0.000314
+Time step 0.38999998569488525: Energy Difference = 0.000328
+Time step 0.4000000059604645: Energy Difference = 0.000340
+Time step 0.4099999964237213: Energy Difference = 0.000351
+Time step 0.41999998688697815: Energy Difference = 0.000360
+Time step 0.4300000071525574: Energy Difference = 0.000368
+Time step 0.4399999976158142: Energy Difference = 0.000376
+Time step 0.44999998807907104: Energy Difference = 0.000383
+Time step 0.46000000834465027: Energy Difference = 0.000391
+Time step 0.4699999988079071: Energy Difference = 0.000400
+Time step 0.47999998927116394: Energy Difference = 0.000409
+Time step 0.49000000953674316: Energy Difference = 0.000418
+Time step 0.5: Energy Difference = 0.000427
+Time step 0.5099999904632568: Energy Difference = 0.000436
+Time step 0.5199999809265137: Energy Difference = 0.000443
+Time step 0.5299999713897705: Energy Difference = 0.000451
+Time step 0.5400000214576721: Energy Difference = 0.000457
+Time step 0.550000011920929: Energy Difference = 0.000461
+Time step 0.5600000023841858: Energy Difference = 0.000465
+Time step 0.5699999928474426: Energy Difference = 0.000468
+Time step 0.5799999833106995: Energy Difference = 0.000470
+Time step 0.5899999737739563: Energy Difference = 0.000471
+Time step 0.6000000238418579: Energy Difference = 0.000473
+Time step 0.6100000143051147: Energy Difference = 0.000474
+Time step 0.6200000047683716: Energy Difference = 0.000476
+Time step 0.6299999952316284: Energy Difference = 0.000478
+Time step 0.6399999856948853: Energy Difference = 0.000480
+Time step 0.6499999761581421: Energy Difference = 0.000483
+Time step 0.6600000262260437: Energy Difference = 0.000487
+Time step 0.6700000166893005: Energy Difference = 0.000492
+Time step 0.6800000071525574: Energy Difference = 0.000497
+Time step 0.6899999976158142: Energy Difference = 0.000502
+Time step 0.699999988079071: Energy Difference = 0.000508
+Time step 0.7099999785423279: Energy Difference = 0.000514
+Time step 0.7200000286102295: Energy Difference = 0.000519
+Time step 0.7300000190734863: Energy Difference = 0.000524
+Time step 0.7400000095367432: Energy Difference = 0.000528
+Time step 0.75: Energy Difference = 0.000532
+Time step 0.7599999904632568: Energy Difference = 0.000536
+Time step 0.7699999809265137: Energy Difference = 0.000539
+Time step 0.7799999713897705: Energy Difference = 0.000541
+Time step 0.7900000214576721: Energy Difference = 0.000543
+Time step 0.800000011920929: Energy Difference = 0.000545
+Time step 0.8100000023841858: Energy Difference = 0.000547
+Time step 0.8199999928474426: Energy Difference = 0.000549
+Time step 0.8299999833106995: Energy Difference = 0.000551
+Time step 0.8399999737739563: Energy Difference = 0.000553
+Time step 0.8500000238418579: Energy Difference = 0.000556
+Time step 0.8600000143051147: Energy Difference = 0.000559
+Time step 0.8700000047683716: Energy Difference = 0.000563
+Time step 0.8799999952316284: Energy Difference = 0.000566
+Time step 0.8899999856948853: Energy Difference = 0.000568
+Time step 0.8999999761581421: Energy Difference = 0.000569
+Time step 0.9100000262260437: Energy Difference = 0.000570
+Time step 0.9200000166893005: Energy Difference = 0.000570
+Time step 0.9300000071525574: Energy Difference = 0.000569
+Time step 0.9399999976158142: Energy Difference = 0.000569
+Time step 0.949999988079071: Energy Difference = 0.000569
+Time step 0.9599999785423279: Energy Difference = 0.000568
+Time step 0.9700000286102295: Energy Difference = 0.000568
+Time step 0.9800000190734863: Energy Difference = 0.000567
+Time step 0.9900000095367432: Energy Difference = 0.000567
+Time step 1.0: Energy Difference = 0.000566
+Average Relative L2 Error: 0.017313
+Energy differences saved to experiments/full_time_ext_tmax_1.0/energy_difference_1.0s.pkl
+Plot saved to experiments/full_time_ext_tmax_1.0/final.png
+Plotting Loss...
+Model and scheduler state saved at epoch 10000.
+Saved checkpoint to experiments/full_time_ext_tmax_1.0/model/checkpoint_epoch_10000.pth
+
+=========================== Training ended ===================================================

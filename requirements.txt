@@ -1,0 +1,8 @@
+# Scoring, figures and training. Versions of the two training machines: environment/packages_*.txt
+torch>=2.4
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.7
+SciencePlots>=2.1
+psutil>=5.9
+sympy>=1.12        # scripts/diagnostics/test_fd_operators.py only

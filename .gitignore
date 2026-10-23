@@ -1,0 +1,14 @@
+# Written by the scripts (README.md); not part of the release
+/rescored/
+/references/
+/retrain/
+# Plots written by the snapshot scripts and the run scripts into the results folders
+**/plots/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+# Figures written by the scripts in scripts/ (the versions printed in the paper are in figures/paper/ and <benchmark>/results/figures/)
+/figures/*.pdf
+/figures/*.png

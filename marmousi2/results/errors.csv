@@ -1,0 +1,4 @@
+run,network,size,t_max,frames,error_percent,magnitude_error_percent,table_3
+Marmousi2_s010_Vanilla_9x128_T1.0_soap_rad,Vanilla,9x128,1.0,101,20.7138,16.3422,20.71
+Marmousi2_s010_FourierXB_9x128_T1.0_soap_rad,Fourier-feature,9x128,1.0,101,18.2518,15.5142,18.25
+Marmousi2_s010_Pirate_3x128_T1.0_soap_rad,PirateNet,3x128,1.0,101,1.6745,1.3841,1.67

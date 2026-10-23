@@ -1,0 +1,16 @@
+run,network,size,t_max,frames,error_percent,magnitude_error_percent,table_3
+SixLayer_Vanilla_5x128_T1.0_2batch_soap_rad,Vanilla,5x128,1.0,101,11.9470,10.4023,11.95
+SixLayer_Vanilla_5x128_T1.0_soap_rad,Vanilla (1 batch per epoch),5x128,1.0,101,22.4453,18.4149,-
+SixLayer_FourierXB_5x128_T1.0_soap_rad,Fourier-feature,5x128,1.0,101,9.1437,8.0231,9.14
+SixLayer_Vanilla_9x128_T1.0_soap_rad,Vanilla,9x128,1.0,101,4.1168,3.5355,4.12
+SixLayer_FourierXB_9x128_T1.0_soap_rad,Fourier-feature,9x128,1.0,101,5.4992,4.8536,5.50
+SixLayer_Pirate_2x64_T1.0_soap_rad,PirateNet,2x64,1.0,101,3.3374,2.9122,3.34
+SixLayer_Pirate_2x128_T1.0_soap_rad,PirateNet,2x128,1.0,101,0.3986,0.3185,0.40
+SixLayer_Pirate_3x128_T1.0_soap_rad,PirateNet,3x128,1.0,101,0.3421,0.2843,0.34
+SixLayer_Vanilla_9x128_T2.0_soap_rad,Vanilla,9x128,2.0,201,10.7033,8.1999,10.70
+SixLayer_FourierXB_9x128_T2.0_soap_rad,Fourier-feature,9x128,2.0,201,12.2227,9.2608,12.22
+SixLayer_Pirate_2x64_T2.0_scale1_soap_rad,PirateNet,2x64,2.0,201,9.8226,7.9143,9.82
+SixLayer_Pirate_3x64_T2.0_soap_rad,PirateNet,3x64,2.0,201,10.8630,8.7183,10.86
+SixLayer_Pirate_2x128_T2.0_soap_rad,PirateNet,2x128,2.0,201,4.5048,3.3835,4.50
+SixLayer_Pirate_3x128_T2.0_soap_rad,PirateNet,3x128,2.0,201,3.0008,2.2323,3.00
+SixLayer_Pirate_2x64_T2.0_scale2_soap_rad,PirateNet (s=2),2x64,2.0,201,10.5823,8.2124,-

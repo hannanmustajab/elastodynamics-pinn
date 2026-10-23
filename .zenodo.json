@@ -1,0 +1,35 @@
+{
+  "title": "Adaptive PINNs for elastic wave propagation in heterogeneous media: code and trained networks",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "description": "Training scripts, network definitions (Vanilla MLP, Fourier-feature MLP, PirateNet), SOAP optimizer, training logs and trained networks of the 24 runs of the paper \"Adaptive Physics-Informed Neural Networks (PINNs) for Elastic Wave Propagation in Heterogeneous Media\" (homogeneous, two-layer, six-layer and Marmousi2 media), with the scripts that compute the DEVITO reference solutions, score the networks against them and draw the figures, and the source data of every plot. scripts/diagnostics/score_soap_runs.py reproduces every error of Table 3 of the paper from the stored networks. Licences: code MIT; trained networks, training logs, ground-truth wavefields and figure data CC BY 4.0.",
+  "creators": [
+    {
+      "name": "Mustajab, Abdul Hannan",
+      "affiliation": "Kiel University"
+    },
+    {
+      "name": "Wuttke, Frank",
+      "affiliation": "Kiel University"
+    },
+    {
+      "name": "Khan, Ayra Riaz",
+      "affiliation": "Aligarh Muslim University"
+    },
+    {
+      "name": "Rizvi, Zarghaam Haider",
+      "affiliation": "GeoAnalysis Engineering"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "physics-informed neural networks",
+    "elastic wave propagation",
+    "PirateNet",
+    "SOAP optimizer",
+    "residual-based adaptive sampling",
+    "Marmousi2",
+    "DEVITO"
+  ]
+}
