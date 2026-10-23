@@ -73,7 +73,7 @@ python scripts/diagnostics/score_soap_runs.py SixLayer_Pirate_3x128_T1.0_soap_ra
 
 The script writes `rescored/error_vs_epoch.csv` (the error after 10,000 epochs) and `rescored/error_vs_time.csv` (the error
 at every reference time step). It then prints each error next to the value in `figures/data/` and in Table 3 and exits
-with status 1 if one differs. On an Apple laptop GPU (MPS) the 23 runs of Table 3 took under 10 minutes; a CPU works but is slower
+with status 1 if one differs. On an Apple laptop GPU (MPS) 23 runs took under 10 minutes; a CPU works but is slower
 (`--cpu` forces it). `--references DIR` reads the references from another folder.
 
 ## Conventions
